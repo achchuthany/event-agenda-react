@@ -216,17 +216,23 @@ export default function AgendaViewer({ program }) {
         </h1>
 
         {program.programLabel && (
-          <div className="text-xl text-blue-200 italic mb-6">
+          <div className="text-xl text-blue-200 mb-6">
             {program.programLabel}
           </div>
         )}
 
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="inline-flex items-center text-white text-lg font-medium">
-            Date: {dateRange}
+            <span className="mr-2 bg-white text-blue-800 px-2 py-1 rounded">
+              Date
+            </span>{" "}
+            {dateRange}
           </div>
           <div className="inline-flex items-center text-white text-lg font-medium">
-            Location: {program.venue}
+            <span className="mr-2 bg-white text-blue-800 px-2 py-1 rounded">
+              Mode
+            </span>{" "}
+            {program.venue}
           </div>
         </div>
 
