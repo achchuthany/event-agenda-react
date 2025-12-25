@@ -4,7 +4,7 @@ import programData from "./data/program.json";
 
 export default function App() {
   return (
-    <div className="min-h-screen p-4">
+    <div>
       <AgendaViewer program={programData} />
     </div>
   );

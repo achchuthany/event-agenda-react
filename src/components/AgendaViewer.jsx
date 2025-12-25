@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-
+import logo from "../assets/logo.png";
 /**
  * AgendaViewer
  * - Props: { program } where program matches the provided JSON structure
@@ -134,15 +134,12 @@ export default function AgendaViewer({ program }) {
   // Fullscreen day view component (modal-like). Kept simple and self-contained.
   function DayModal({ day, onClose }) {
     return (
-      <div className="fixed inset-0 z-50 bg-gradient-to-br from-blue-50 to-blue-100 overflow-auto p-6">
-        <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
-          <div className="flex items-start justify-between mb-8">
+      <div className="fixed inset-0 z-50 bg-gradient-to-br from-blue-50 to-blue-100 overflow-auto py-4 px-2 sm:py-8 sm:px-8">
+        <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl p-2 sm:p-4">
+          <div className="flex items-start justify-between mb-6 sm:mb-8">
             <div>
               <div className="text-3xl font-bold text-blue-900">
                 {formatDayDate(day.date)}
-              </div>
-              <div className="text-lg text-blue-600 mt-2">
-                {new Date(day.date).toLocaleDateString()}
               </div>
             </div>
 
@@ -156,7 +153,7 @@ export default function AgendaViewer({ program }) {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {day.sessions.map((session, i) => {
               const status = sessionStatus(session, day.date);
               const start = parseDateTime(day.date, session.startTime);
@@ -170,7 +167,10 @@ export default function AgendaViewer({ program }) {
                   : "bg-white shadow-md hover:shadow-lg transition-shadow duration-200";
 
               return (
-                <div key={i} className={`p-8 rounded-xl border ${cardVariant}`}>
+                <div
+                  key={i}
+                  className={`p-4 sm:p-6 rounded-xl border ${cardVariant}`}
+                >
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-lg font-medium text-gray-700">
                       {formatTime(start)} — {formatTime(end)}
@@ -182,10 +182,10 @@ export default function AgendaViewer({ program }) {
                     )}
                   </div>
 
-                  <div className="text-2xl font-bold text-blue-900 mb-3">
+                  <div className="text-2xl font-bold text-blue-800 mb-3">
                     {session.title}
                   </div>
-                  <div className="text-base text-gray-600">
+                  <div className="text-base text-gray-500">
                     {session.speakers.join(", ")}
                   </div>
                 </div>
@@ -198,12 +198,15 @@ export default function AgendaViewer({ program }) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white py-8 px-4">
+    <div className="h-screen bg-white overflow-y-auto">
       {selectedDay && <DayModal day={selectedDay} onClose={closeDay} />}
       {/* Header (blue palette, centered) */}
-      <div className="max-w-5xl mx-auto bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl p-10 mb-12 text-center shadow-2xl">
+      <div className="w-full bg-gradient-to-r from-blue-600 to-blue-800 p-4 sm:p-10 text-center shadow-2xl flex flex-col justify-center items-center">
+        {/* Logo */}
+        <img src={logo} alt="Organization Logo" className="mb-6 w-48 h-auto" />
+
         {program.organization && (
-          <div className="text-lg text-blue-200 font-medium mb-4">
+          <div className="text-2xl text-blue-200 font-medium mb-4">
             {program.organization}
           </div>
         )}
@@ -218,17 +221,32 @@ export default function AgendaViewer({ program }) {
           </div>
         )}
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full shadow-lg border border-white/30">
-            {dateRange}
+        <div className="flex flex-col items-center justify-center gap-4">
+          <div className="inline-flex items-center text-white text-lg font-medium">
+            Date: {dateRange}
           </div>
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full shadow-lg border border-white/30">
-            {program.venue}
+          <div className="inline-flex items-center text-white text-lg font-medium">
+            Location: {program.venue}
           </div>
         </div>
+
+        {/* Down arrow indicator */}
+        <button
+          onClick={() =>
+            document
+              .getElementById("agenda")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+          className="mt-8 inline-flex items-center px-8 py-4 rounded-full bg-yellow-400 text-black font-semibold shadow-lg border border-yellow-600 hover:bg-yellow-500 transition-colors duration-200 animate-bounce"
+        >
+          Agenda ↓
+        </button>
       </div>
 
-      <div className="max-w-5xl mx-auto space-y-8">
+      <div
+        id="agenda"
+        className="max-w-5xl mx-auto space-y-4 sm:space-y-8 mt-8 p-4 sm:p-8"
+      >
         {/* Days */}
         {program.days.map((day) => (
           <section key={day.date} className="mb-8">
@@ -239,7 +257,7 @@ export default function AgendaViewer({ program }) {
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") openDay(day);
               }}
-              className="bg-gradient-to-r from-blue-100 to-blue-200 rounded-2xl p-6 shadow-lg border border-blue-300 cursor-pointer hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-100 to-blue-200 rounded-2xl p-3 sm:p-6 shadow-lg border border-blue-300 cursor-pointer hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
                 <div className="text-left">
@@ -259,14 +277,14 @@ export default function AgendaViewer({ program }) {
               </div>
             </div>
 
-            <div className="mt-6 space-y-4">
+            <div className="mt-4 sm:mt-6 space-y-4">
               {day.sessions.map((session, idx) => {
                 const status = sessionStatus(session, day.date);
                 const start = parseDateTime(day.date, session.startTime);
                 const end = parseDateTime(day.date, session.endTime);
 
                 const base =
-                  "p-6 rounded-xl border flex flex-col sm:flex-row items-start sm:items-center shadow-md hover:shadow-lg transition-all duration-200";
+                  "p-3 sm:p-6 rounded-xl border flex flex-col sm:flex-row items-start sm:items-center shadow-md hover:shadow-lg transition-all duration-200";
                 const timeCol =
                   "text-base font-medium text-gray-700 w-full sm:w-32";
                 const bodyCol = "flex-1 mt-4 sm:mt-0 sm:ml-6";
