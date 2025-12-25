@@ -201,7 +201,7 @@ export default function AgendaViewer({ program }) {
     <div className="h-screen bg-white overflow-y-auto">
       {selectedDay && <DayModal day={selectedDay} onClose={closeDay} />}
       {/* Header (blue palette, centered) */}
-      <div className="w-full bg-gradient-to-r from-blue-600 to-blue-800 p-4 sm:p-10 text-center shadow-2xl flex flex-col justify-center items-center">
+      <div className="w-full h-screen bg-gradient-to-r from-blue-600 to-blue-800 p-4 sm:p-10 text-center shadow-2xl flex flex-col justify-center items-center">
         {/* Logo */}
         <img src={logo} alt="Organization Logo" className="mb-6 w-48 h-auto" />
 
