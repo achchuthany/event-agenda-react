@@ -1,0 +1,225 @@
+{
+  "organization": "Faculty of Management Studies and Commerce, University of Jaffna",
+  "programName": "Orientation Program  -Academic Year 2024/2025",
+  "programLabel": "Business Administration and Commerce",
+  "venue": "Online via Zoom",
+  "days": [
+    {
+      "date": "2025-12-29",
+      "dayLabel": "Day 01: Monday 29.12.2025",
+      "sessions": [
+        {
+          "startTime": "09:00",
+          "endTime": "09:30",
+          "title": "Welcome Note",
+          "speakers": [
+            "Mr. V. Kumaradeepan, Chairperson/Orientation Committee."
+          ]
+        },
+        {
+          "startTime": "09:30",
+          "endTime": "10:15",
+          "title": "Scholarships and Financial Assistance",
+          "speakers": [
+            "Ms. J. C. Aravintharaj, Senior Assistant Registrar/Student Welfare, University of Jaffna"
+          ]
+        },
+        {
+          "startTime": "10:15",
+          "endTime": "11:00",
+          "title": "Nurturing Student Well-Being Services",
+          "speakers": [
+            "Prof. G. Shashikesh, Director/Student Welfare, University of Jaffna"
+          ]
+        },
+        {
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "title": "Learning to Live with Diversity",
+          "speakers": [
+            "Mrs. Sivagowri Rajashanthan, Director/Centre for Gender Equity and Equality, University of Jaffna"
+          ]
+        },
+        {
+          "startTime": "12:00",
+          "endTime": "12:30",
+          "title": "Q & A / Networking and Awareness Session",
+          "speakers": ["Orientation Committee"]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-30",
+      "dayLabel": "Day 02: Tuesday 30.12.2025",
+      "sessions": [
+        {
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "title": "LMS Hands-on Session",
+          "speakers": [
+            "Mr. Y. Achchuthan and Mr. K. Siyanthan, Instructors in Computer Technology, Faculty of Management Studies and Commerce"
+          ]
+        },
+        {
+          "startTime": "10:00",
+          "endTime": "12:00",
+          "title": "Learning to Live with Diversity",
+          "speakers": [
+            "Dr. (Mrs) D. Sangarathas, Senior Lecturer/Department of Marketing"
+          ]
+        },
+        {
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "title": "Break",
+          "speakers": []
+        },
+        {
+          "startTime": "13:00",
+          "endTime": "15:00",
+          "title": "English",
+          "speakers": [
+            "Dr. Donna Vaughan, President/Partners in Micro-development Inc."
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-31",
+      "dayLabel": "Day 03: Wednesday 31.12.2025",
+      "sessions": [
+        {
+          "startTime": "09:00",
+          "endTime": "09:10",
+          "title": "Meeting with Parents - Welcoming Address",
+          "speakers": [
+            "Prof. N. Kengatharan, Dean/Faculty of Management Studies and Commerce"
+          ]
+        },
+        {
+          "startTime": "09:10",
+          "endTime": "10:10",
+          "title": "Students' Discipline Reporting System",
+          "speakers": [
+            "Mr. N. Vijenthira, Marshal/University of Jaffna",
+            "Mr. P. Gajanthan, Marshal/University of Jaffna"
+          ]
+        },
+        {
+          "startTime": "10:10",
+          "endTime": "10:40",
+          "title": "Students' Behaviour",
+          "speakers": [
+            "Dr. Dilogini Shangarathas, Deputy Proctor/Faculty of Management Studies and Commerce"
+          ]
+        },
+        {
+          "startTime": "10:40",
+          "endTime": "11:10",
+          "title": "Students' Discipline at the University",
+          "speakers": ["Dr. A. Manjceevan, Proctor/University of Jaffna"]
+        },
+        {
+          "startTime": "11:10",
+          "endTime": "12:00",
+          "title": "Meeting with Parents",
+          "speakers": ["Orientation Committee"]
+        },
+        {
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "title": "Break",
+          "speakers": []
+        },
+        {
+          "startTime": "13:00",
+          "endTime": "15:00",
+          "title": "English",
+          "speakers": [
+            "Dr. Donna Vaughan, President/Partners in Micro-development Inc."
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-01",
+      "dayLabel": "Day 04: Thursday 01.01.2026",
+      "sessions": [
+        {
+          "startTime": "09:00",
+          "endTime": "09:30",
+          "title": "Curriculum: A Synopsis",
+          "speakers": [
+            "Prof. M. A. Shanthakumary, Chairperson/CDRMC, Faculty of Management Studies and Commerce"
+          ]
+        },
+        {
+          "startTime": "09:30",
+          "endTime": "10:00",
+          "title": "E-Resources",
+          "speakers": [
+            "Dr. S. Ketheeswaran, Deputy Librarian/University of Jaffna"
+          ]
+        },
+        {
+          "startTime": "10:00",
+          "endTime": "12:00",
+          "title": "English",
+          "speakers": [
+            "Dr. Donna Vaughan, President/Partners in Micro-development Inc."
+          ]
+        },
+        {
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "title": "Break",
+          "speakers": []
+        },
+        {
+          "startTime": "13:00",
+          "endTime": "15:00",
+          "title": "Learning to Live with Diversity",
+          "speakers": [
+            "Ms. Thasika Thanushan, Senior Lecturer/Department of Human Resource Management"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-02",
+      "dayLabel": "Day 05: Friday 02.01.2026",
+      "sessions": [
+        {
+          "startTime": "09:00",
+          "endTime": "10:30",
+          "title": "Learning to Live with Diversity",
+          "speakers": [
+            "Dr. Priya Muraleetharan, Senior Lecturer/Department of Accounting"
+          ]
+        },
+        {
+          "startTime": "10:30",
+          "endTime": "11:30",
+          "title": "Discussion with Academic and Student Counsellors",
+          "speakers": [
+            "Committee of Academic Students' Counselling and Student Counsellors, Faculty of Management Studies and Commerce"
+          ]
+        },
+        {
+          "startTime": "11:30",
+          "endTime": "12:00",
+          "title": "Hands-on Troubleshooting, Feedback & LMS Review",
+          "speakers": [
+            "Mr. Y. Achchuthan and Mr. K. Siyanthan, Instructors in Computer Technology, Faculty of Management Studies and Commerce"
+          ]
+        },
+        {
+          "startTime": "12:00",
+          "endTime": "12:15",
+          "title": "Concluding Remarks",
+          "speakers": []
+        }
+      ]
+    }
+  ]
+}
